@@ -44,6 +44,7 @@ def sendExactMessage(message = ''):
         sendExactMessage(message)
 
 # Method to send a message out to the entire network after formatting
+# Messages must be in the format of "{'KEY1':'ITEM1','KEY2',ITEM2',...}"
 # Do not modify without cause
 def sendMessage(message = ''):
     message = "{'from':'" + name + "','msg':'" + message + "'}"
@@ -66,6 +67,8 @@ def proactiveSpace():
 #    sendMessage("{'temp':'25','vel':'32'}") # Example of how to send data that can be proccessed on other routers in the network
 
     print('Proactive Space') # Debug print
+    
+    sendMessage('Hello World!')
 
 # Method to allow router reactions to incoming messages, activates every time a
 # message is recieved
